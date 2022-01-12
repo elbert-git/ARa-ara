@@ -1,0 +1,58 @@
+html{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(187,26,29,255);
+  z-index: 9999;
+}
+
+.bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background-repeat: repeat;
+  background-size: 100px;
+  background-image: url("./Assets/LandingPageAssets/Background.png");
+  height: 100%;
+  width: 100%;
+  color:red;
+}
+
+.homepage-root{
+  position: absolute;
+  left: 0;
+  top: 0;;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.title-image-parent{
+  width:100%;
+  height: 30%;
+  padding:0em;
+  margin:0;
+  display:flex;
+  justify-content: center;
+}
+.title-image{
+margin-top: 2em;
+margin-bottom: 2em;
+}
+
+.greeting-button-parent{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+.greeting-button{
+  height: 3em;
+  width: 60%;
+  border-radius: 1em;
+}
