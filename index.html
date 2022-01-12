@@ -8,18 +8,6 @@
 	<link rel="stylesheet" href="./Pages/GreetingPickerPage/stylesheet.css">
 </head>
 <body>
-	<div id=router></div>
 
-	<script>
-		//get element
-		const element = document.getElementById('router');
-
-		//fetch data to element
-		fetch('./Pages/GreetingPickerPage/GreetingPicker.html')
-		.then(res=>res.text())
-		.then(data=>{
-			element.innerHTML=data
-		});
-	</script>
 </body>
 </html>
