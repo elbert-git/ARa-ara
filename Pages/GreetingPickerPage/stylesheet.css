@@ -1,0 +1,89 @@
+/* -------------------globals  */
+html{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(187,26,29,255);
+  z-index: 9999;
+}
+
+/* ------------background */
+.bg{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background-repeat: repeat;
+  background-size: 100px;
+  background-image: url("../.././Assets/LandingPageAssets/Background.png");
+  height: 100%;
+  width: 100%;
+  color:red;
+}
+.overlay{
+  position:absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#ffe6009c 40%, #00000062  100%);
+  mix-blend-mode: overlay;
+}
+.homepage-root{
+  position: absolute;
+  left: 0;
+  top: 0;;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+/* --------title image */
+.title-image-parent{
+  width:100%;
+  height: 30%;
+  padding:0em;
+  margin:0;
+  display:flex;
+  justify-content: center;
+}
+.title-image{
+margin-top: 3em;
+margin-bottom: 2em;
+}
+.select-prompt{
+  text-align: center;
+  color: white;
+  font-size:2em;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffffff, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  margin-bottom:1em;
+}
+
+
+
+/* --------Greeting Buttons */
+.greeting-button-parent{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.greeting-button{
+  height: 3em;
+  width: 60%;
+  font-size: 2em;
+  border-radius: 1em;
+  background: radial-gradient(#ff531e 40%, #ffb108 100%);
+  color: white;
+  border: 2px solid #fbff08;
+  box-shadow: 0 0 10px #ffdc15;
+  text-align: center;
+  text-decoration: none;
+  margin:auto;
+}
