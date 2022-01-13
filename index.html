@@ -13,5 +13,14 @@
 		">
 			<img src="./Assets/istockphoto-472497550-170667a.jpg" alt="">
 		</a>
+		 
+		<script>
+			const linkElement = document.getElementById("ar-link");
+			linkElement.addEventListener("message", function (event) {   
+					if (event.data == "_apple_ar_quicklook_button_tapped") {
+						window.open("https://www.google.com", "_blank");
+					}
+			}, false);
+		</script>
 	</body>
 </html>
