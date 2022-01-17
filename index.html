@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="./Pages/GreetingPickerPage/stylesheet.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy CNY</title>
+
+  <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
-	<div id=router></div>
-	<script src="./main.js"></script>
+  <!-- Background -->
+  <div class="tiling-background"></div>
+  <div class="background-overlay layer-over"></div>
+   
+  <!-- landing page -->
+  <div id="landing-page-root" class="landing-page layer-over idle-out">
+    <div class="landing-grid-root">
+      <div class="landing-title-image temp-image"> Title Image</div>
+      <div class="landing-tiger-image temp-image"><div>Tiger image</div></div>
+      <div class="landing-start-button-parent">
+        <button class="landing-start-button" onclick="landingPageStartButtonPressed()">Begin</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- tiger selection page -->
+  <div id="tiger-selection-page-root" class="tiger-selection-page-root layer-over idle-out">
+    <div class="tiger-selection-top">
+      <div>Select your tiger</div>
+    </div>
+    <div class=" tiger-selection-mid-parent">
+      <button id="tiger-selection-prevTiger-button" onclick="tigerSelectionChangeTiger()">&lt</button>
+      <div class="tiger-selection-tiger-image-container temp-image">
+        <div id=tiger-selection-tiger-image-div>Tiger A</div>
+      </div>
+      <button id="tiger-selection-nextTiger-button" onclick="tigerSelectionChangeTiger()">&gt</button>
+    </div>
+    <div class=" tiger-selection-bot-parent " >
+      <button class="tiger-selection-back-button" onclick="tigerSelectionPrevPageButtonPressed()">&lt</button>
+      <div></div>
+      <button class="tiger-selection-next-button" onclick="tigerSelectionNextPageButtonPressed()">confirm ></button>
+    </div>
+  </div>
+
+  <!-- greetings picker page -->
+  <div id='greetings-selection-root' class='layer-over idle-out'>
+    <div class="greetings-top-parent">Select your greeting</div>
+    <div class="greeetings-middle-parent">
+      <div class="temp-image " id="greetings-selection-scroll-image">scroll image 0</div>
+      <div class="greetings-selection-buttons-parent">
+        <button class='greetings-selection-buttons' onclick="greetingsSelectionGreetingsButtons(0)">Greetings 0</button>
+        <button class='greetings-selection-buttons' onclick="greetingsSelectionGreetingsButtons(1)">Greetings 1</button>
+        <button class='greetings-selection-buttons' onclick="greetingsSelectionGreetingsButtons(2)">Greetings 2</button>
+      </div>
+    </div>
+    <div class="greetings-bottom-parent">
+      <button class="greetings-selection-back-button" onclick="greetinsSelectionPrevPageButtonPressed()">&lt</button>
+      <div></div>
+      <button id='greetings-selection-next-button' onclick="greetingsSelectionNextPageButtonPressed()">Confirm</button>
+    </div>
+  </div>
+   
+  <script src="./index.js"></script>
 </body>
 </html>

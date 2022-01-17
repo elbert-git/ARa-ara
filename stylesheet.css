@@ -1,0 +1,290 @@
+/* ---------------------globals */
+body, html{
+  height: 100%;
+  padding:0;
+  margin:0;
+  overflow: hidden; 
+}
+
+button{
+  background: radial-gradient(#ff0000, #ff8800);
+  border-radius: 2em;
+  color: white;
+  text-shadow: 0 0 0.2em #fffffffd;
+  border-color:#ffd900;
+  box-shadow:0 0 0.5em #ffd900;
+  border-style: solid;
+}
+
+/* ---------------------utility */
+.layer-over{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.blue-border{
+  border: 3px solid;
+}
+
+.temp-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 195, 255, 0.575);
+  font-size: 3em;
+  border: rgba(0, 0, 0, 0.61) dotted 5px
+}
+
+/* ---------------------transitions */
+.transition-out{
+  transition: all 1s;
+  top:20vw;
+  opacity: 0;
+  pointer-events: none;
+}
+.transition-in{
+  transition: all 1s;
+  top:0vw;
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+}
+.idle-out{
+  top: 20vw;
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+/* ---------------------background */
+.tiling-background{
+  background-image: url(./Assets/StartingSection/Background.png);
+  background-repeat: repeat;
+  height: 100%;
+  background-size: 15%;
+}
+
+.background-overlay{
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: overlay;
+  background-image: radial-gradient(#faf4e0, rgba(255, 0, 0, 0));
+}
+
+/* ---------------------Landing page */
+.landing-grid-root{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+.landing-title-image{
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 100%;
+}
+.landing-tiger-image{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 100%;
+}
+.landing-start-button-parent{
+  grid-row-start: 3;
+  grid-row-end: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-start-button{
+  font-size: 3em;
+  height: em;
+  width: 70%;
+}
+
+/* ---------------------tiger selection page */
+.tiger-selection-page-root{
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  
+  font-size: 2em;
+}
+
+/* top */
+.tiger-selection-top{
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column: span 3;
+
+  background: linear-gradient(rgba(255, 136, 0, 0.534), rgba(255, 0, 0, 0));
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 2em;
+  
+  height: 100%;
+}
+
+
+/* middle */
+.tiger-selection-mid-parent{
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+  height: 100%;;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+
+  justify-content: center;
+  align-items: center;
+
+
+}
+.tiger-selection-image-container{
+  width: 100%;
+  height: 100%;
+
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#tiger-selection-prevTiger-button{
+  font-size: 1.5em;
+  height: 2em;
+
+  margin: 1em;
+
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+#tiger-selection-nextTiger-button{
+  font-size: 1.5em;
+  height: 2em;
+  
+  margin: 1em;
+
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+
+/* bottom */
+.tiger-selection-bot-parent{
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column: span 3;
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  align-items: center;
+  justify-content: center;
+  
+  height: 100%;
+}
+.tiger-selection-back-button{
+  font-size: 0.8em;
+  height: 3em;
+  align-items: center;
+  justify-content: center;
+}
+.tiger-selection-next-button{
+  font-size: 0.8em;
+  height: 3em;
+}
+
+
+/* ---------------------greetings selection page */
+#greetings-selection-root{
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+}
+
+/* top */
+.greetings-top-parent{
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(rgba(255, 136, 0, 0.534), rgba(255, 0, 0, 0));
+  
+  color:white;
+  font-size: 3em;
+
+  width: 100%;
+
+  text-align: center;
+}
+
+
+/* middle */
+.greetings-middle-parent{
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+#greetings-selection-scroll-image{
+  height: 30%;
+}
+
+.greetings-selection-buttons-parent{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  height: 70%;
+  width: 100%;
+}
+.greetings-selection-buttons{
+  font-size: 2em;
+  padding: 1em;
+  margin: 0.5em;
+  width: 80%;
+}
+
+/* bottom */
+.greetings-bottom-parent{
+  grid-row-start: 3;
+  grid-row-end: 3;
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  align-items: center;
+  justify-content: center;
+  
+  height: 100%;
+}
+.greetings-selection-back-button{
+  font-size: 1.5em;
+  padding: 1em;
+  margin-left:1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.greetings-selection-next-button{
+  font-size: 1.5em;
+  padding: 1em;
+  margin-left:1em;
+  align-items: center;
+  justify-content: center;
+}
+
+
