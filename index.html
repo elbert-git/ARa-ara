@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
     <!-- ar component -->
-    <script src="https://ada.is/basketball-demo/ar-components.js"></script>
+    <script src="https://ada.is/basketball-demo/ar-git .js"></script>
   </head>
   <body>
     <!-- scene -->
@@ -25,9 +25,10 @@
 
       <!-- reticle -->
       <a-entity ar-hit-test="target:#world">
-        <a-sphere
+        <a-plane
           scale="0.1 0.1 0.1"
-        ></a-sphere>
+          material="src: ./Assets/reticle.png"
+        ></a-plane>
       </a-entity>
     </a-scene>
 
