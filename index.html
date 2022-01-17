@@ -6,12 +6,14 @@
     <!-- a-frame extras -->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
+    <link rel="stylesheet" href="./stylesheet.css">
+
     <!-- ar component -->
     <script src="https://ada.is/basketball-demo/ar-components.js"></script>
   </head>
   <body>
     <!-- scene -->
-    <a-scene webxr="optionalFeatures: hit-test;">
+    <a-scene allowvr="no" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;" >
 
       <!-- asset list -->
       <a-assets>
@@ -25,13 +27,18 @@
 
       <!-- reticle -->
       <a-entity ar-hit-test="target:#world">
-        <a-plane
+        <!-- <a-plane
           scale="0.1 0.1 0.1"
           rotation="-90 0 0"
           material="src: ./Assets/reticle.png"
-        ></a-plane>
+        ></a-plane> -->
       </a-entity>
     </a-scene>
+
+    <!-- overlays -->
+    <div id="overlay" class="overlay">
+      <div>aaa</div>
+    </div>
 
     <!-- script -->
     <script>
