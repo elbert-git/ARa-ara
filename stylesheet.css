@@ -3,6 +3,10 @@ div.a-enter-vr {
   visibility: hidden;
   display: none;
   position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 div.a-enter-ar{
@@ -11,6 +15,7 @@ div.a-enter-ar{
   bottom: 1em;
   right: 40%;
   margin: 0;
+  height: 20%;
 }
 
 #overlay{
