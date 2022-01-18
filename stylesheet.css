@@ -1,34 +1,83 @@
-/* div.a-enter-ar, */
+/* globals */
+html, body{
+  height: 100%;
+  margin:0;
+  padding: 0;
+}
+
+body{
+  display: grid;
+  grid-template-rows:1fr 10fr;
+}
+
+/* a-frame stuff */
 div.a-enter-vr {
   visibility: hidden;
   display: none;
   position: absolute;
   width: 0;
-  height: 0;
+  height: 80%;
   margin: 0;
   padding: 0;
 }
-
 .a-enter-ar{
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 20%;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+.a-enter-ar-button{
+  position: inherit;
+  top:auto;
+  left:auto;
+  bottom: auto;
+  right: auto;
+}
+a-scene{
+  margin: 0;
+  padding: 0;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+
+
+/* top share parent  */
+.top-share-parent{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.a-enter-ar-button{
-  height: 50%;
+
+
+/* bottom ar prompt*/
+.bottom-ar-prompt{
+  background: linear-gradient(#ff0000, rgb(255, 187, 2));
+  text-align: center;
+  width: 100%;
+  color: white;
+  height: 2em;
+  font-size: 1em;
+  padding: auto;
+  margin:0;
+
+  grid-row-start: 3;
+  grid-row-end: 3;
 }
 
-#overlay{
-  color: blue;
-  height:200px;
-  width: 200px;
-  display: none;
-}
 
+
+
+
+
+
+
+
+
+/* dom overlay */
 header {
   background-color: rgba(255, 255, 255, 0.90);
   position: relative;
@@ -42,4 +91,14 @@ header {
   color: blue;
   height:200px;
   width: 200px;
+}
+
+#overlay{
+  color: blue;
+  height:200px;
+  width: 200px;
+}
+
+.hide{
+  display: none;
 }

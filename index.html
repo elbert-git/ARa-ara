@@ -12,11 +12,17 @@
     <script src="https://ada.is/basketball-demo/ar-components.js"></script>
   </head>
   <body>
+    <!-- top share banner   -->
+    <div class="top-share-parent">
+      <button>share with friends</button>
+    </div>
+
     <!-- scene -->
     <a-scene 
       embedded
       webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
       vr-mode-ui="vrEnabled:false; arEnabled: true"
+      background="color:red"
       >
 
       <!-- asset list -->
@@ -46,14 +52,19 @@
       ></a-camera>
     </a-scene>
 
+    <!-- bottom ar prompt -->
+    <div class="bottom-ar-prompt">
+      tap here to display in AR
+    </div>
     
 
-    <div id="overlay">
+    <div id="overlay" class="hide">
       <header>
         <div class="overlay-box">;tempo;lkjasd;lfj</div>
         <a href="http://www.google.com">cliiiiiic</a>
       </header>
     </div>
+    
 
 
     <!-- script -->
@@ -62,8 +73,21 @@
 
       // function called on ar button clicked
       document.querySelector('a-scene').addEventListener('loaded', function () {
+        // [] if have no ar turn off ar
+
+        // add event listener to ar button click 
         let a = document.getElementsByClassName("a-enter-ar-button")[0];
-        a.addEventListener("click", function(){console.log("buttonc lcikecas;dlkf;lkasdf;ljk");});
+        a.addEventListener("click", function(){ // run this on button click
+          console.log("ar button clicked");
+
+          // remove bottom ar prompt
+          // remove top share button
+          // turn off background
+
+          // turn on overlay dom
+          document.getElementById("overlay").classList.remove("hide");
+          
+        });
       })
     </script>
   </body>
