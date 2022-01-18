@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- scene -->
-    <a-scene allowvr="no" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;" >
+    <a-scene embedded  allowvr="no" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;" >
 
       <!-- asset list -->
       <a-assets>
@@ -43,6 +43,14 @@
     <!-- script -->
     <script>
     const reticle = document.querySelector('[ar-hit-test]');
+
+    navigator.xr.requestSession(‘immersive-ar’,
+   {
+     optionalFeatures: ["dom-overlay"],
+     domOverlay: {
+       root: document.getElementById("overlay")
+     }
+   }).then(onSessionStarted, onRequestSessionError);
 
     </script>
   </body>
