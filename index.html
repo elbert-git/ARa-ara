@@ -14,7 +14,7 @@
   <body>
     <!-- scene -->
     <a-scene 
-      webxr="optionalFeatures: hit-test; overlayElement:#overlay"
+      webxr="optionalFeatures: hit-test; requiredFeatures: dom-overlay, domOverlay:#overlay"
       vr-mode-ui="vrEnabled:false; arEnabled: true"
       >
 
@@ -42,15 +42,20 @@
     </a-scene>
 
     <div id="overlay">
-      as;dlfj;laskjdf;lkj;
+      <header>
+        <summary>Barebones WebXR DOM Overlay</summary>
+        <p>
+          This sample demonstrates [...]
+        </p>
+        <div id="session-info" />
+        <button id="xr-button" class="barebones-button" />
+      </header>
     </div>
 
 
     <!-- script -->
     <script>
-    const reticle = document.querySelector('[ar-hit-test]');
-    
-
+      const reticle = document.querySelector('[ar-hit-test]');
     </script>
   </body>
 </html>
