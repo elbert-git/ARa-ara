@@ -28,6 +28,7 @@ header {
 }
 
 .overlay-box{
+  background-color: red;
   color: blue;
   height:200px;
   width: 200px;
