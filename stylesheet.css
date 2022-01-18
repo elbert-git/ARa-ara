@@ -9,19 +9,24 @@ div.a-enter-vr {
   padding: 0;
 }
 
-div.a-enter-ar{
-  color: red;
-  position: absolute;
-  bottom: 1em;
-  right: 40%;
+.a-enter-ar{
+  width: 100%;
   margin: 0;
+  padding: 0;
   height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a-enter-ar-button{
+  height: 50%;
 }
 
 #overlay{
   color: blue;
   height:200px;
   width: 200px;
+  display: none;
 }
 
 header {

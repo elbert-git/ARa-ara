@@ -14,6 +14,7 @@
   <body>
     <!-- scene -->
     <a-scene 
+      embedded
       webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
       vr-mode-ui="vrEnabled:false; arEnabled: true"
       >
@@ -36,13 +37,21 @@
           material="src: ./Assets/reticle.png"
         ></a-plane> -->
       </a-entity>
+
+      <a-scene background="color: red"></a-scene>
+
+      <!-- camera -->
+      <a-camera
+      look-controls-enabled="false"
+      position="0 0 1"
+      ></a-camera>
     </a-scene>
 
     
 
     <div id="overlay">
       <header>
-        <div class="overlay-box">;alskdjf;lkjasd;lfj</div>
+        <div class="overlay-box">;tempo;lkjasd;lfj</div>
         <a href="http://www.google.com">cliiiiiic</a>
       </header>
     </div>
@@ -50,12 +59,13 @@
 
     <!-- script -->
     <script>
-      //document.querySelector('a-scene').enterAR()
-      console.log("-----------------------");
       const reticle = document.querySelector('[ar-hit-test]');
 
-      document.querySelector('a-scene').enterAR();
+      // function called on ar button clicked
+      document.querySelector('a-scene').addEventListener('loaded', function () {
+        let a = document.getElementsByClassName("a-enter-ar-button")[0];
+        a.addEventListener("click", function(){console.log("buttonc lcikecas;dlkf;lkasdf;ljk");});
+      })
     </script>
-    <!-- <script src="index.js"></script> -->
   </body>
 </html>
