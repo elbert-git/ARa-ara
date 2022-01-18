@@ -14,8 +14,9 @@
   <body>
     <!-- scene -->
     <a-scene 
-      webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
-    >
+      webxr="optionalFeatures: hit-test; overlayElement:#overlay"
+      vr-mode-ui="vrEnabled:false; arEnabled: true"
+      >
 
       <!-- asset list -->
       <a-assets>
@@ -39,6 +40,10 @@
         ></a-plane> -->
       </a-entity>
     </a-scene>
+
+    <div id="overlay">
+      as;dlfj;laskjdf;lkj;
+    </div>
 
 
     <!-- script -->

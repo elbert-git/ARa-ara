@@ -1,0 +1,20 @@
+/* div.a-enter-ar, */
+div.a-enter-vr {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+}
+
+div.a-enter-ar{
+  color: red;
+  position: absolute;
+  bottom: 1em;
+  right: 40%;
+  margin: 0;
+}
+
+#overlay{
+  color: blue;
+  height:200px;
+  width: 200px;
+}
