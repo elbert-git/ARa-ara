@@ -18,3 +18,17 @@ div.a-enter-ar{
   height:200px;
   width: 200px;
 }
+
+header {
+  background-color: rgba(255, 255, 255, 0.90);
+  position: relative;
+  padding: 0.5em;
+  left: 0px;
+  [...]
+}
+
+.overlay-box{
+  color: blue;
+  height:200px;
+  width: 200px;
+}
