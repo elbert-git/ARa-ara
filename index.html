@@ -15,7 +15,7 @@
     <!-- top share banner   -->
     <div class="top-share-parent">
       <button>share with friends</button>
-      aaa
+      adf
     </div>
 
     <!-- scene -->
@@ -61,8 +61,10 @@
 
     <div id="overlay" class="hide">
       <header>
-        <div class="overlay-box">;tempo;lkjasd;lfj</div>
-        <a href="http://www.google.com">cliiiiiic</a>
+        <button>
+          <a href="http://www.google.com">share</a>
+        </button>
+        <div>hover the camera on a surface and tap on it to spawn the tiger</div>
       </header>
     </div>
     
@@ -81,14 +83,9 @@
         a.addEventListener("click", function(){ // run this on button click
           console.log("ar button clicked");
 
-          // remove bottom ar prompt
-          // remove top share button
-          // turn off background
-
           // turn on overlay dom
           document.getElementById("overlay").classList.remove("hide");
           document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
-          
         });
       })
     </script>
