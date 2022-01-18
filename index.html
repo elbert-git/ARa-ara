@@ -13,7 +13,9 @@
   </head>
   <body>
     <!-- scene -->
-    <a-scene embedded  allowvr="no" webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;" >
+    <a-scene 
+      webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
+    >
 
       <!-- asset list -->
       <a-assets>
@@ -23,6 +25,9 @@
       <!-- main ar scene -->
       <a-entity scale="0.05 0.05 0.05"  id="world">
         <a-entity gltf-model="#crab" rotation="0 180 0" animation-mixer="clip:Dance; loop:infinite;"></a-entity>
+        <a-entity
+        class="link"
+        geometry="primitive: plane; height: 1; width: 1"></a-entity>
       </a-entity>
 
       <!-- reticle -->
@@ -35,22 +40,11 @@
       </a-entity>
     </a-scene>
 
-    <!-- overlays -->
-    <div id="overlay" class="overlay">
-      <div>aaa</div>
-    </div>
 
     <!-- script -->
     <script>
     const reticle = document.querySelector('[ar-hit-test]');
-
-    navigator.xr.requestSession(‘immersive-ar’,
-   {
-     optionalFeatures: ["dom-overlay"],
-     domOverlay: {
-       root: document.getElementById("overlay")
-     }
-   }).then(onSessionStarted, onRequestSessionError);
+    
 
     </script>
   </body>
