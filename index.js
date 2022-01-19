@@ -92,21 +92,21 @@ function greetingsSelectionGreetingsButtons(index){
       greetingIndex = '0';
 
       //change ui
-      greetingsSelectionScrollImage.innerHTML = 'scroll image 0';
+      greetingsSelectionScrollImage.setAttribute("src", "./Assets/StartingSection/scroll0.png");
 
       break;
     case 1:
       //greeting 1
       greetingIndex = '1';
       //change ui
-      greetingsSelectionScrollImage.innerHTML = 'scroll image 1';
+      greetingsSelectionScrollImage.setAttribute("src", "./Assets/StartingSection/scroll1.png");
       break;
     case 2:
       //greeting 2
       greetingIndex = '2';
         //change ui     
-      greetingsSelectionScrollImage.innerHTML = 'scroll image 2';
-      break;
+        greetingsSelectionScrollImage.setAttribute("src", "./Assets/StartingSection/scroll2.png");
+        break;
     default:
         console.log('something broke');
         break;

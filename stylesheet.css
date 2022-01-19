@@ -286,9 +286,21 @@ button{
   
 
 }
-#greetings-selection-scroll-image{
+.greetings-selection-scroll-image{
   height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}.greetings-selection-scroll-image > img{
+  max-width: 90vw;
+  position: relative;
 }
+#scroll-text{
+  position: absolute;
+  top:50px;
+
+}
+
 
 .greetings-selection-buttons-parent{
   display: flex;
@@ -350,5 +362,9 @@ button{
 .glowing-text{
   color: white;
   text-shadow: 0 0 0.2em #fffffffd;
+}
+
+.chinese-scroll{
+  font-family: 'Zhi Mang Xing', cursive;
 }
 
