@@ -138,3 +138,10 @@ function getMobileOperatingSystem() {
 
   return "unknown";
 }
+
+// ------------ force preload images
+tigerSelectionChangeTiger();
+tigerSelectionScreenImage();
+greetingsSelectionGreetingsButtons(2);
+greetingsSelectionGreetingsButtons(1);
+greetingsSelectionGreetingsButtons(0);
