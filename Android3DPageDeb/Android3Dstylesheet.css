@@ -93,6 +93,9 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  text-align: center;
+
   width: 100%;
   padding: 1em;
   margin:0;
@@ -107,8 +110,12 @@ header {
 
 #overlay{
   color: rgb(255, 255, 255);
-  height:200px;
-  width: 200px;
+  max-height: 50%;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
 }
 
 .hide{
