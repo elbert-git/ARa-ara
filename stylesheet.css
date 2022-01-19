@@ -83,7 +83,7 @@ header {
   position: relative;
   padding: 0.5em;
   left: 0px;
-  top:0;
+  bottom:0;
 }
 
 .overlay-box{

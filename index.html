@@ -33,7 +33,12 @@
 
       <!-- main ar scene -->
       <a-entity scale="0.05 0.05 0.05"  id="world">
-        <a-entity gltf-model="#crab" rotation="0 180 0" animation-mixer="clip:Dance; loop:infinite;"></a-entity>
+        <a-entity gltf-model="#crab" rotation="0 180 0" animation-mixer="clip:Dance; loop:infinite;">
+          <a-entity
+          sound="src:./chinese-loop.mp3; autoplay: true; loop: true"
+          ></a-entity>
+        </a-entity>
+      
       </a-entity>
 
       <!-- reticle -->
@@ -88,6 +93,21 @@
           document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
         });
       })
+
+      // looping audio
+      myAudio = new Audio('./chinese-loop'); 
+      if (typeof myAudio.loop == 'boolean')
+      {
+          myAudio.loop = true;
+      }
+      else
+      {
+          myAudio.addEventListener('ended', function() {
+              this.currentTime = 0;
+              this.play();
+          }, false);
+      }
+      myAudio.play();
     </script>
   </body>
 </html>
