@@ -54,7 +54,7 @@ function tigerSelectionChangeTiger(){
   if(tigerAIsShowing){
     // toggle to tiger B
     tigerAIsShowing = !tigerAIsShowing;
-    tigerSelectionScreenImage.innerHTML = 'Tiger B';
+    tigerSelectionScreenImage.setAttribute("src", "./Assets/StartingSection/TigerFemale.png");
 
     //change tiger identifier
     tigerType = 'B';
@@ -62,7 +62,7 @@ function tigerSelectionChangeTiger(){
   else{
     // toggle to tiger A
       tigerAIsShowing = !tigerAIsShowing;
-      tigerSelectionScreenImage.innerHTML = 'Tiger A';
+      tigerSelectionScreenImage.setAttribute("src", "./Assets/StartingSection/TigerMale.png");
       //change tiger identifier
       tigerType = 'A';
   }
@@ -72,7 +72,7 @@ function tigerSelectionChangeTiger(){
 //------------ greetings selection page funcs
 function greetingsSelectionNextPageButtonPressed(){
   //link to created url
-  window.location.href=createUrl();l
+  window.location.href=createURL();
 }
 
 function greetinsSelectionPrevPageButtonPressed(){

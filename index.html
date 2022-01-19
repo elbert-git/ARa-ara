@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Happy CNY</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Yesteryear&display=swap" rel="stylesheet">
+
 
   <link rel="stylesheet" href="./stylesheet.css">
 </head>
@@ -16,8 +26,14 @@
   <!-- landing page -->
   <div id="landing-page-root" class="landing-page layer-over idle-out">
     <div class="landing-grid-root">
-      <div class="landing-title-image temp-image"> Title Image</div>
-      <div class="landing-tiger-image temp-image"><div>Tiger image</div></div>
+      <div class="landing-title-image glowing-text">
+        <p class="landing-page-title-small-text">Share your</p>
+        <p class="yesteryear landing-page-title-big-text">Chinese New Year</p>
+        <p class="landing-page-title-small-text">well wishes</p>
+      </div>
+      <div class="landing-tiger-div ">
+        <img src="./Assets/StartingSection/LandingTigerImage.png" alt="" class="landing-title-image">
+      </div>
       <div class="landing-start-button-parent">
         <button class="landing-start-button" onclick="landingPageStartButtonPressed()">Begin</button>
       </div>
@@ -26,26 +42,26 @@
 
   <!-- tiger selection page -->
   <div id="tiger-selection-page-root" class="tiger-selection-page-root layer-over idle-out">
-    <div class="tiger-selection-top">
-      <div>Select your tiger</div>
+    <div class="tiger-selection-top yesteryear">
+      <div>Select Your Tiger</div>
     </div>
     <div class=" tiger-selection-mid-parent">
       <button id="tiger-selection-prevTiger-button" onclick="tigerSelectionChangeTiger()">&lt</button>
-      <div class="tiger-selection-tiger-image-container temp-image">
-        <div id=tiger-selection-tiger-image-div>Tiger A</div>
+      <div class="tiger-selection-tiger-image-container">
+        <img src="./Assets/StartingSection/TigerMale.png" id="tiger-selection-tiger-image-div" class="tiger-selection-tiger-image-div"></img>
       </div>
       <button id="tiger-selection-nextTiger-button" onclick="tigerSelectionChangeTiger()">&gt</button>
     </div>
     <div class=" tiger-selection-bot-parent " >
       <button class="tiger-selection-back-button" onclick="tigerSelectionPrevPageButtonPressed()">&lt</button>
       <div></div>
-      <button class="tiger-selection-next-button" onclick="tigerSelectionNextPageButtonPressed()">confirm ></button>
+      <button class="tiger-selection-next-button" onclick="tigerSelectionNextPageButtonPressed()">confirm </button>
     </div>
   </div>
 
   <!-- greetings picker page -->
   <div id='greetings-selection-root' class='layer-over idle-out'>
-    <div class="greetings-top-parent">Select your greeting</div>
+    <div class="greetings-top-parent yesteryear">Select your greeting</div>
     <div class="greeetings-middle-parent">
       <div class="temp-image " id="greetings-selection-scroll-image">scroll image 0</div>
       <div class="greetings-selection-buttons-parent">
@@ -57,7 +73,7 @@
     <div class="greetings-bottom-parent">
       <button class="greetings-selection-back-button" onclick="greetinsSelectionPrevPageButtonPressed()">&lt</button>
       <div></div>
-      <button id='greetings-selection-next-button' onclick="greetingsSelectionNextPageButtonPressed()">Confirm</button>
+      <button class='greetings-selection-next-button' onclick="greetingsSelectionNextPageButtonPressed()">Confirm</button>
     </div>
   </div>
    
