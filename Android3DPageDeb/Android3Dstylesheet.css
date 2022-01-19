@@ -1,0 +1,116 @@
+/* globals */
+html, body{
+  height: 100%;
+  margin:0;
+  padding: 0;
+}
+
+body{
+  display: grid;
+  grid-template-rows:1fr 10fr;
+}
+
+/* a-frame stuff */
+div.a-enter-vr {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+}
+.a-enter-ar{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;;
+}
+.a-enter-ar-button{
+  position: inherit;
+  top:auto;
+  left:auto;
+  bottom: auto;
+  right: auto;
+}
+a-scene{
+  margin: 0;
+  padding: 0;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+
+
+
+/* top share parent  */
+.top-share-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#ffbb02, #ff0000);
+}
+.top-share-button{
+  padding: 1em;
+}
+
+
+/* bottom ar prompt*/
+.bottom-ar-prompt{
+  background: linear-gradient(#ff0000, rgb(255, 187, 2));
+  text-align: center;
+  width: 100%;
+  color: white;
+  height: 2em;
+  font-size: 1em;
+  padding: auto;
+  margin:0;
+
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+
+
+
+
+
+
+
+
+
+
+/* dom overlay */
+header {
+  background: linear-gradient(#ffbb02, #ff000000);
+  position: relative;
+  padding: 0.5em;
+  left: 0px;
+  bottom:0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  margin:0;
+}
+
+.overlay-box{
+  background-color: black;
+  color: rgb(255, 255, 255);
+  height:200px;
+  width: 200px;
+}
+
+#overlay{
+  color: rgb(255, 255, 255);
+  height:200px;
+  width: 200px;
+}
+
+.hide{
+  display: none;
+}

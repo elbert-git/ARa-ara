@@ -122,7 +122,8 @@ function createURL(){
   urlString += greetingIndex + '/page'
 
   //return
-  return urlString
+  return "/Android3DPageDeb/Android3DPage.html"
+  //return urlString
 }
 
 function getMobileOperatingSystem() {

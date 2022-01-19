@@ -1,0 +1,114 @@
+<html>
+  <head>
+    <!-- aframe -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script type="text/javascript"></script>
+    <!-- a-frame extras -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
+
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="./Android3Dstylesheet.css">
+
+    <!-- ar component -->
+    <script src="https://ada.is/basketball-demo/ar-components.js"></script>
+  </head>
+  <body>
+    <!-- top share banner   -->
+    <div class="top-share-parent">
+      <button class="top-share-button">Share</button>
+    </div>
+
+    <!-- scene -->
+    <a-scene 
+      embedded
+      webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
+      vr-mode-ui="vrEnabled:false; arEnabled: true"
+      background="color:red"
+      >
+
+      <!-- asset list -->
+      <a-assets>
+        <a-asset-item id="crab" src="./Assets/Crab/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <!-- main ar scene -->
+      <a-entity scale="0.05 0.05 0.05"  id="world">
+        <a-entity gltf-model="#crab" rotation="0 180 0" animation-mixer="clip:Dance; loop:infinite;">
+          <a-entity
+          sound="src:./chinese-loop.mp3; autoplay: true; loop: true"
+          ></a-entity>
+        </a-entity>
+      
+      </a-entity>
+
+      <!-- reticle -->
+      <a-entity ar-hit-test="target:#world">
+        <!-- <a-plane
+          scale="0.1 0.1 0.1"
+          rotation="-90 0 0"
+          material="src: ./Assets/reticle.png"
+        ></a-plane> -->
+      </a-entity>
+
+
+      <!-- camera -->
+      <a-camera
+      look-controls-enabled="false"
+      position="0 0 1"
+      ></a-camera>
+    </a-scene>
+
+    <!-- bottom ar prompt -->
+    <div class="bottom-ar-prompt">
+      tap here to display in AR
+    </div>
+    
+
+    <div id="overlay" class="hide">
+      <header>
+        <button>
+          <a href="http://www.google.com">share</a>
+        </button>
+        <div>hover the camera on a surface and tap on it to spawn the tiger</div>
+      </header>
+    </div>
+    
+
+
+    <!-- script -->
+    <script>
+      const reticle = document.querySelector('[ar-hit-test]');
+
+      // function called on ar button clicked
+      document.querySelector('a-scene').addEventListener('loaded', function () {
+        // [] if have no ar turn off ar
+
+        // add event listener to ar button click 
+        let a = document.getElementsByClassName("a-enter-ar-button")[0];
+        a.addEventListener("click", function(){ // run this on button click
+          console.log("ar button clicked");
+
+          // turn on overlay dom
+          document.getElementById("overlay").classList.remove("hide");
+          document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
+        });
+      })
+
+      // looping audio
+      myAudio = new Audio('./chinese-loop'); 
+      if (typeof myAudio.loop == 'boolean')
+      {
+          myAudio.loop = true;
+      }
+      else
+      {
+          myAudio.addEventListener('ended', function() {
+              this.currentTime = 0;
+              this.play();
+          }, false);
+      }
+      myAudio.play();
+    </script>
+  </body>
+</html>
