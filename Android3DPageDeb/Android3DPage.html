@@ -29,14 +29,19 @@
 
       <!-- asset list -->
       <a-assets>
-        <a-asset-item id="crab" src="./Assets/Crab/scene.gltf"></a-asset-item>
+        <a-asset-item id="crab" src="./Assets/Tigertest/TigerB2/TigerB2.gltf"></a-asset-item>
       </a-assets>
 
       <!-- main ar scene -->
       <a-entity scale="0.05 0.05 0.05"  id="world">
-        <a-entity gltf-model="#crab" rotation="0 180 0" animation-mixer="clip:Dance; loop:infinite;">
+        <a-entity 
+          gltf-model="#crab"
+          rotation="0 0 0"
+          scale="2 2 2"
+          animation-mixer="clip: Action; animation-loop:true;"
+          >
           <a-entity
-          sound="src:./chinese-loop.mp3; autoplay: true; loop: true"
+          sound="src: ./chinese-loop.mp3; autoplay: true; loop: true"
           ></a-entity>
         </a-entity>
       
@@ -55,7 +60,7 @@
       <!-- camera -->
       <a-camera
       look-controls-enabled="false"
-      position="0 0 1"
+      position="0 0.3 1"
       ></a-camera>
     </a-scene>
 
