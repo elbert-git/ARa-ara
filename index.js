@@ -142,7 +142,7 @@ function getMobileOperatingSystem() {
 
 // ------------ force preload images
 tigerSelectionChangeTiger();
-tigerSelectionScreenImage();
+tigerSelectionChangeTiger();
 greetingsSelectionGreetingsButtons(2);
 greetingsSelectionGreetingsButtons(1);
 greetingsSelectionGreetingsButtons(0);
