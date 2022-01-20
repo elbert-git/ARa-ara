@@ -94,24 +94,17 @@
 
       // function called on ar button clicked
       document.querySelector('a-scene').addEventListener('loaded', function () {
-
-        //check if have AR
-        console.log("checking ar");
-        const xrSession = navigator.xr.requestSession("immersive-ar", {
-          requiredFeatures: ["local", "hit-test"]
-        }).catch(() => {document.getElementsByClassName("a-enter-ar-button")[0].classList.add("hide"); document.getElementById("test").innerHTML="no ar"}); 
-        document.getElementById("test").innerHTML="ar"
-
-        
-
         // add event listener to ar button click 
         let a = document.getElementsByClassName("a-enter-ar-button")[0];
         a.addEventListener("click", function(){ // run this on button click
           console.log("ar button clicked");
 
-          // turn on overlay dom
-          document.getElementById("overlay").classList.remove("hide");
-          document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
+          if(renderer.xr.isPresenting){
+            // turn on overlay dom
+            document.getElementById("overlay").classList.remove("hide");
+            document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
+          }
+
         });
       })
 
