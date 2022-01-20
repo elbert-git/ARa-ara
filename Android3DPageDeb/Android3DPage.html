@@ -24,7 +24,7 @@
     <!-- scene -->
     <a-scene 
       embedded
-      webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
+      webxr="requiredFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
       vr-mode-ui="vrEnabled:false; arEnabled: true"
       background="transparent:true"
       >
@@ -92,19 +92,17 @@
     <script>
       const reticle = document.querySelector('[ar-hit-test]');
 
-      // function called on ar button clicked
+      //check ar functionalities
+      if(navigator.xr)
+
+      // function called on a-frame load
       document.querySelector('a-scene').addEventListener('loaded', function () {
         // add event listener to ar button click 
         let a = document.getElementsByClassName("a-enter-ar-button")[0];
         a.addEventListener("click", function(){ // run this on button click
           console.log("ar button clicked");
-
-          if(renderer.xr.isPresenting){
-            // turn on overlay dom
-            document.getElementById("overlay").classList.remove("hide");
-            document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
-          }
-
+          document.getElementById("overlay").classList.remove("hide");
+          document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
         });
       })
 
