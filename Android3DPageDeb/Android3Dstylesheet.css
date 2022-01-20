@@ -149,7 +149,7 @@ header {
 .img-parent{
 
 }
-.img-parent > img{
+.rotate-prompt > img{
   max-width: 50%;
   animation: rotateAnimation 4s linear infinite;
   transform: translateZ(42px);
@@ -167,13 +167,6 @@ header {
   padding: 1em;
 }
 
-@keyframes rotateAnimationParent {
-	0% {transform: rotateX(0)}
-	25% {transform: rotateX(60deg)}
-	50% {transform: rotateX(0deg)}
-  75% {transform: rotateX(-60deg)}
-	100% {transform: rotateX(0)}
-}
 
 @keyframes rotateAnimation {
 	0% {transform: rotateY(45deg)}
