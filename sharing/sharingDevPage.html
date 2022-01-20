@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+  <title>Share with your loved ones</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Yesteryear&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+
+  <!-- home page stylesheet -->
+  <link rel="stylesheet" href="../stylesheet.css">
+  <!-- this page style sheet -->
+  <link rel="stylesheet" href="./sharing.css">
+</head>
+<body>
+  <!-- Background -->
+  <div class="tiling-background"></div>
+  <div class="background-overlay layer-over"></div>
+
+  <div class="sharing-root layer-over">
+    <div class="landing-title-image glowing-text">
+      <p class="landing-page-title-small-text">Share your</p>
+      <p class="yesteryear landing-page-title-big-text">Chinese New Year</p>
+      <p class="landing-page-title-small-text">well wishes</p>
+    </div>
+    <div class="sharing-page-image-parent">
+      <img src="../Assets/StartingSection/LandingTigerImage.png" class="sharing-page-main-image"></img>
+    </div>
+    <div class="sharing-bottom-parent">
+      <button onclick="console.log('link back to home page');">Customise Tiger</button>
+      <button onclick="shareTiger()">Share with loved ones</button>
+    </div>
+  </div>
+  
+  <script>
+    function shareTiger(){
+      navigator.share("https://www.google.com");
+    }
+  </script>
+</body>
+</html>
