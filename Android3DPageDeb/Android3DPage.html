@@ -63,7 +63,7 @@
     </a-scene>
 
     <!-- bottom ar prompt -->
-    <div class="bottom-ar-prompt">
+    <div id="test"class="bottom-ar-prompt">
       tap here to display in AR
     </div>
     
@@ -91,11 +91,14 @@
 
       // function called on ar button clicked
       document.querySelector('a-scene').addEventListener('loaded', function () {
+        //check if have ar
         if ("xr" in window.navigator) {
           /* WebXR can be used! */
           // do nothing
+          document.getElementById("test").innerHTML="has ar"
         } else {
           /* WebXR isn't available */
+          document.getElementById("test").innerHTML="no ar"
           //disable ar button
           document.getElementsByClassName("a-enter-ar-button")[0].classList.add("hide");
         }
