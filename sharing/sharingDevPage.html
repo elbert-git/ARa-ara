@@ -42,7 +42,17 @@
   
   <script>
     function shareTiger(){
-      navigator.share("https://www.google.com");
+      if(navigator.share){
+        navigator.share({
+          title: "aaa",
+          url:"www.google.com"
+        }).then(() => {
+          console.log("shared");
+        })
+        .catch(console.error);
+      }else{
+        console.log("uh oh");
+      }
     }
   </script>
 </body>
