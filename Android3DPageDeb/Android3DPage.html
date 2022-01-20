@@ -82,7 +82,7 @@
           <div>Rotate your phone side to side to scan surface</div>
           <button id="dismiss-button" onclick="dismissPrompt()">dismiss</button>
         </div>
-        
+
       </div>
     </div>
     
@@ -93,7 +93,11 @@
       const reticle = document.querySelector('[ar-hit-test]');
 
       //check ar functionalities
-      if(navigator.xr)
+      if ("xr" in window.navigator) {
+        /* WebXR can be used! */
+      } else {
+        /* WebXR isn't available */
+      }
 
       // function called on a-frame load
       document.querySelector('a-scene').addEventListener('loaded', function () {
@@ -102,7 +106,7 @@
         a.addEventListener("click", function(){ // run this on button click
           console.log("ar button clicked");
           document.getElementById("overlay").classList.remove("hide");
-          document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
+          document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true");
         });
       })
 
