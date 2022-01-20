@@ -32,7 +32,6 @@
       <!-- asset list -->
       <a-assets>
         <a-asset-item id="crab" src="./Assets/Tigertest/TigerB2/TigerB2.gltf"></a-asset-item>
-        <a-asset-item id="arrow" src="./Assets/ArrowSpawnHEre/arrow.gltf"></a-asset-item>
       </a-assets>
 
       <!-- main ar scene -->
@@ -52,10 +51,7 @@
 
       <!-- reticle -->
       <a-entity ar-hit-test="target:#world">
-        <a-entity
-        scale="0.05 0.05 0.05" 
-        gltf-model="#arrow"
-        ></a-entity>
+        <a-entity text="value: Tap!; align: center;" rotation="-90 0 0"></a-entity>
       </a-entity>
 
 
@@ -79,6 +75,11 @@
           Share
         </button>
       </header>
+
+      <div>
+        <img src="./Assets/PhoneRotatePrompt.png" alt="">
+        <div>Rotate your phone side to side to scan surface</div>
+      </div>
     </div>
     
 
@@ -101,21 +102,6 @@
           document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
         });
       })
-
-      // looping audio
-      myAudio = new Audio('./chinese-loop'); 
-      if (typeof myAudio.loop == 'boolean')
-      {
-          myAudio.loop = true;
-      }
-      else
-      {
-          myAudio.addEventListener('ended', function() {
-              this.currentTime = 0;
-              this.play();
-          }, false);
-      }
-      myAudio.play();
     </script>
   </body>
 </html>
