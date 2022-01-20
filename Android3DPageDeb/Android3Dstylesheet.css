@@ -151,7 +151,6 @@ header {
 }
 .rotate-prompt > img{
   max-width: 50%;
-  animation: rotateAnimation 4s linear infinite;
   transform: translateZ(42px);
 
   width: 150px;
@@ -167,11 +166,3 @@ header {
   padding: 1em;
 }
 
-
-@keyframes rotateAnimation {
-	0% {transform: rotateY(45deg)}
-	25% {transform: rotateY(0deg)}
-  50% {transform: rotateY(-45deg)}
-  75% {transform: rotateY(-0deg)}
-	100% {transform: rotateY(45deg)}
-}
