@@ -24,7 +24,7 @@
     <!-- scene -->
     <a-scene 
       embedded
-      webxr="requiredFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
+      webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
       vr-mode-ui="vrEnabled:false; arEnabled: true"
       background="transparent:true"
       >
@@ -92,16 +92,16 @@
     <script>
       const reticle = document.querySelector('[ar-hit-test]');
 
-      //check ar functionalities
-      if ("xr" in window.navigator) {
-        /* WebXR can be used! */
-      } else {
-        /* WebXR isn't available */
-        document.getElementsByClassName("a-enter-ar-button")[0].remove();
-      }
-
       // function called on a-frame load
       document.querySelector('a-scene').addEventListener('loaded', function () {
+        //check ar functionalities
+        if ("xr" in window.navigator) {
+          /* WebXR can be used! */
+        } else {
+          /* WebXR isn't available */
+          document.getElementsByClassName("a-enter-ar-button")[0].remove();
+        }
+
         // add event listener to ar button click 
         let a = document.getElementsByClassName("a-enter-ar-button")[0];
         a.addEventListener("click", function(){ // run this on button click
