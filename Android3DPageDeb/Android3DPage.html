@@ -94,17 +94,15 @@
 
       // function called on ar button clicked
       document.querySelector('a-scene').addEventListener('loaded', function () {
-        //check if have ar
-        if ("xr" in window.navigator) {
-          /* WebXR can be used! */
-          // do nothing
-          document.getElementById("test").innerHTML="has ar"
-        } else {
-          /* WebXR isn't available */
-          document.getElementById("test").innerHTML="no ar"
-          //disable ar button
-          document.getElementsByClassName("a-enter-ar-button")[0].classList.add("hide");
-        }
+
+        //check if have AR
+        console.log("checking ar");
+        const xrSession = navigator.xr.requestSession("immersive-ar", {
+          requiredFeatures: ["local", "hit-test"]
+        }).catch(() => {document.getElementsByClassName("a-enter-ar-button")[0].classList.add("hide"); document.getElementById("test").innerHTML="no ar"}); 
+        document.getElementById("test").innerHTML="ar"
+
+        
 
         // add event listener to ar button click 
         let a = document.getElementsByClassName("a-enter-ar-button")[0];
