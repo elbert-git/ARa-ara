@@ -143,9 +143,20 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  
 }
-.rotate-prompt > img{
+.img-parent{
+
+}
+.img-parent > img{
   max-width: 50%;
+  animation: rotateAnimation 4s linear infinite;
+  transform: translateZ(42px);
+
+  width: 150px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 .rotate-prompt > div{
   width: 50%;
@@ -154,4 +165,20 @@ header {
 }
 .rotate-prompt > button{
   padding: 1em;
+}
+
+@keyframes rotateAnimationParent {
+	0% {transform: rotateX(0)}
+	25% {transform: rotateX(60deg)}
+	50% {transform: rotateX(0deg)}
+  75% {transform: rotateX(-60deg)}
+	100% {transform: rotateX(0)}
+}
+
+@keyframes rotateAnimation {
+	0% {transform: rotateY(45deg)}
+	25% {transform: rotateY(0deg)}
+  50% {transform: rotateY(-45deg)}
+  75% {transform: rotateY(-0deg)}
+	100% {transform: rotateY(45deg)}
 }
