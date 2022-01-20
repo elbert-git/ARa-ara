@@ -80,7 +80,7 @@
         <div class="rotate-prompt">
           <img style="" src="./Assets/PhoneRotatePrompt.png" alt="">
           <div>Rotate your phone side to side to scan surface</div>
-          <button onclick="() => {document.getElementById('dismiss-on-tap').className.add('hide')}">dismiss</button>
+          <button id="dismiss-button" onclick="dismissPrompt()">dismiss</button>
         </div>
         
       </div>
@@ -116,6 +116,12 @@
           document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true")
         });
       })
+
+      //dismiss prompt
+      function dismissPrompt() {
+        document.getElementById('dismiss-on-tap').remove();
+        console.log('a');
+      }
     </script>
   </body>
 </html>
