@@ -76,9 +76,10 @@
         </button>
       </header>
 
-      <div>
-        <img src="./Assets/PhoneRotatePrompt.png" alt="">
+      <div class="rotate-prompt">
+        <img style="" src="./Assets/PhoneRotatePrompt.png" alt="">
         <div>Rotate your phone side to side to scan surface</div>
+        <button>dismiss</button>
       </div>
     </div>
     
@@ -90,7 +91,14 @@
 
       // function called on ar button clicked
       document.querySelector('a-scene').addEventListener('loaded', function () {
-        // [] if have no ar turn off ar
+        if ("xr" in window.navigator) {
+          /* WebXR can be used! */
+          // do nothing
+        } else {
+          /* WebXR isn't available */
+          //disable ar button
+          document.getElementsByClassName("a-enter-ar-button")[0].classList.add("hide");
+        }
 
         // add event listener to ar button click 
         let a = document.getElementsByClassName("a-enter-ar-button")[0];
