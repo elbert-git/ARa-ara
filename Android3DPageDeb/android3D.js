@@ -7,13 +7,14 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
   if (navigator.xr) {
     navigator.xr.isSessionSupported('immersive-ar')
     .then((isSupported) => {
-      if (!isSupported) {
+      if (isSupported) {
+        alert("ar able");
+        
+      }
+      else{
         alert("'immersive-ar' isn't supported, or an error occurred activating AR!");
         document.getElementsByClassName("a-enter-ar-button")[0].remove();
         document.getElementsByClassName("bottom-ar-prompt")[0].remove();
-      }
-      else{
-        alert("ar able");
       }
     });
   }
