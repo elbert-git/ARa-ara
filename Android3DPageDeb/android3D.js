@@ -89,15 +89,13 @@ function spawnAppleARButton(){
   arLink.href = 
   "./Assets/AppleTigers/Tiger" +
   tigerID +
-  ".USDZ"
+  ".usdz"
   
 }
 
 if(getMobileOperatingSystem() == "IOS"){
   spawnAppleARButton(); 
 }
-
-spawnAppleARButton();
 
 
 
