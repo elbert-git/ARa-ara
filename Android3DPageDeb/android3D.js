@@ -102,7 +102,7 @@ function spawnAppleARButton(){
    ".usdz"
   
 }
-//ss
+
 
 
 
