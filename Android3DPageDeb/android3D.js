@@ -9,11 +9,11 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     .then((isSupported) => {
       if (isSupported) {
         console.log("supported");
-        alert("supports local-floor");
+       //alert("supports local-floor");
       }
       else {
         console.log("no suportr for local-floor");
-        alert("no suportr for local-floor");
+        //alert("no suportr for local-floor");
       }
     });
   }
@@ -80,12 +80,24 @@ function spawnAppleARButton(){
   arButton.classList.remove("hide");
   arButton.classList.add("apple-ar-button-parent");
   arButton.classList.add("layer-over");
+
+  // get appropriate link to model
+  let tigerID = window.location.href.split("?")[1];
+  console.log(tigerID)
+
+  let arLink = document.getElementById("ar-link")
+  arLink.href = 
+  "./Assets/AppleTigers/Tiger" +
+  tigerID +
+  ".USDZ"
   
 }
 
 if(getMobileOperatingSystem() == "IOS"){
   spawnAppleARButton(); 
 }
+
+spawnAppleARButton();
 
 
 
