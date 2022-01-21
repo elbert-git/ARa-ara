@@ -4,7 +4,6 @@ const reticle = document.querySelector('[ar-hit-test]');
 // function called on a-frame load
 document.querySelector('a-scene').addEventListener('loaded', function () {
   //check ar android funcs
-
   if (navigator.xr) {
     navigator.xr.isSessionSupported('immersive-ar')
     .then((isSupported) => {
@@ -13,9 +12,14 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
         document.getElementsByClassName("a-enter-ar-button")[0].remove();
         document.getElementsByClassName("bottom-ar-prompt")[0].remove();
       }
+      else{
+        alert("ar able");
+      }
     });
   }
 
+  //load approriate tiger
+  LoadAppropriateTiger();
 
   // add event listener to ar button click 
   let a = document.getElementsByClassName("a-enter-ar-button")[0];
@@ -32,6 +36,11 @@ function dismissPrompt() {
   console.log('a');
 }
 
+function LoadAppropriateTiger(){
+  // ------- get tiger id
+  let tigerID = window.location.href.split("?")[1];
+  console.log(tigerID)
+}
 
 
 
