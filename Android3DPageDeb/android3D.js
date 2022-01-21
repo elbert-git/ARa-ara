@@ -21,6 +21,10 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
   //load approriate tiger
   LoadAppropriateTiger();
 
+  if(getMobileOperatingSystem() == "IOS"){
+    spawnAppleARButton(); 
+  }
+
   // add event listener to ar button click 
   let a = document.getElementsByClassName("a-enter-ar-button")[0];
   a.addEventListener("click", function(){ // run this on button click
@@ -28,6 +32,11 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     document.getElementById("overlay").classList.remove("hide");
     document.getElementsByTagName("a-scene")[0].setAttribute("background", "color: #ff000000; transparent: true");
   });
+
+  //apple ar check
+  if(getMobileOperatingSystem() == "IOS"){
+    spawnAppleARButton(); 
+  }
 })
 
 //dismiss android scan env prompt
@@ -50,6 +59,7 @@ function LoadAppropriateTiger(){
     //delete tiger A
     document.getElementById("tigerAEntity").remove();
   }
+  
 
   // delete appropriate scroll and greetings
   switch(tigerID[1]){
@@ -93,10 +103,6 @@ function spawnAppleARButton(){
   
 }
 //ss
-
-if(getMobileOperatingSystem() == "IOS"){
-  spawnAppleARButton(); 
-}
 
 
 
