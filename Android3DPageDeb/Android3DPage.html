@@ -19,6 +19,7 @@
     <!-- top share banner   -->
     <div class="top-share-parent">
       <button class="top-share-button">Share</button>
+      <button class="top-share-button">Customise Tiger</button>
     </div>
 
     <!-- scene -->
@@ -31,19 +32,25 @@
 
       <!-- asset list -->
       <a-assets>
-        <a-asset-item id="crab" src="./Assets/Tigertest/TigerB2/TigerB2.gltf"></a-asset-item>
+        <!-- main tiger model -->
+        <a-asset-item id="tigerMale" src="./Assets/Tigertest/TigerB2/TigerB2.gltf"></a-asset-item>
+
+        <!-- audio -->
+        <audio id="music" src="./chinese-loop.mp3"></audio>
+
+
       </a-assets>
 
       <!-- main ar scene -->
       <a-entity scale="0.05 0.05 0.05"  id="world">
         <a-entity 
-          gltf-model="#crab"
+          gltf-model="#tigerMale"
           rotation="0 0 0"
           scale="1 1 1"
           animation-mixer="clip: Action; animation-loop:true;"
           >
           <a-entity
-          sound="src: ./chinese-loop.mp3; autoplay: true; loop: true"
+          sound="src: #music; autoplay: true; loop: true"
           ></a-entity>
         </a-entity>
       
@@ -51,7 +58,11 @@
 
       <!-- reticle -->
       <a-entity ar-hit-test="target:#world">
-        <a-entity text="value: Tap!; align: center;" rotation="-90 0 0"></a-entity>
+        <a-plane 
+        rotation="-90 0 0"
+        scale="0.1 0.1 0.1"
+        material="src:./Assets/reticle.png"
+        ></a-plane>
       </a-entity>
 
 
@@ -82,12 +93,11 @@
           <div> <b>Rotate</b> your phone around <b>Slowly</b> to scan a surface</div>
           <button id="dismiss-button" onclick="dismissPrompt()">dismiss</button>
         </div>
-
       </div>
     </div>
 
     <!-- apple ar button -->
-    <div id="apple-AR-Button">
+    <div id="apple-ar-button-parent" class="hide">
       <button>AR</button>
     </div>
 

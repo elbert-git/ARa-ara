@@ -56,6 +56,7 @@ a-scene{
 .top-share-button{
   padding: 1em 3em;
   margin-top: 1em;
+  margin-left: 1em;
 }
 
 
@@ -169,3 +170,32 @@ b{
   text-shadow:0px 0px 20px rgb(255, 189, 189);
 }
 
+
+
+/* apple AR button start*/
+canvas{
+  position: relative;
+}
+.apple-ar-button-parent{
+  position: absolute;;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  
+
+  z-index: 9999;
+}
+.apple-ar-button-parent > button {
+  padding: 1em;
+  font-size: 1em;
+  margin-bottom: 3em;
+}
