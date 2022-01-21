@@ -139,3 +139,4 @@ function shareButtonClicked(){;
     navigator.share(shareData);
   }
 }
+

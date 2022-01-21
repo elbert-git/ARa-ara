@@ -199,3 +199,11 @@ canvas{
   font-size: 1em;
   margin-bottom: 3em;
 }
+
+
+#apple-ar-button-parent{
+  pointer-events:none ;
+}
+#apple-ar-button-parent > button{
+  pointer-events:visible ;
+}
