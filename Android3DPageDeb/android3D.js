@@ -3,14 +3,12 @@ const reticle = document.querySelector('[ar-hit-test]');
 
 // function called on a-frame load
 document.querySelector('a-scene').addEventListener('loaded', function () {
-  //check ar android funcs
-
-
+  //[ ] check ar android funcs
   const arOkay = navigator.xr.isSessionSupported("immersive-ar");
   if (arOkay) {
-    alert("immersive-ok");
+
   } else {
-    alert("immersive no okay");
+
   }
 
   //load approriate tiger
@@ -35,6 +33,35 @@ function LoadAppropriateTiger(){
   // ------- get tiger id
   let tigerID = window.location.href.split("?")[1];
   console.log(tigerID)
+
+  // delete appropriate tiger
+  if(tigerID[0] == 'A'){
+    //delete tiger b
+    document.getElementById("tigerBEntity").remove();
+  }
+  else{
+    //delete tiger A
+    document.getElementById("tigerAEntity").remove();
+  }
+
+  // delete appropriate scroll and greetings
+  switch(tigerID[1]){
+    case '0':
+      document.getElementById("scroll1Entity").remove();
+      document.getElementById("scroll2Entity").remove();
+      break;
+    case '1':
+      document.getElementById("scroll0Entity").remove();
+      document.getElementById("scroll2Entity").remove();
+      break; 
+    case '2':
+      document.getElementById("scroll0Entity").remove();
+      document.getElementById("scroll1Entity").remove();
+      break; 
+    default:
+      console("load greeting failed, moved to default greeting")
+      break
+  }
 }
 
 

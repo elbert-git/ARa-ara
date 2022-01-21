@@ -33,7 +33,17 @@
       <!-- asset list -->
       <a-assets>
         <!-- main tiger model -->
-        <a-asset-item id="tigerMale" src="./Assets/Tigertest/TigerB2/TigerB2.gltf"></a-asset-item>
+        <a-asset-item id="tigerA" src="./Assets/TigerInParts/TigerA/TigerA.gltf"></a-asset-item>
+        <a-asset-item id="tigerB" src="./Assets/TigerInParts/TigerB/TigerB.gltf"></a-asset-item>
+
+        <!-- constant props -->
+        <a-asset-item id="const-props" src="./Assets/TigerInParts/Constants/Constants.gltf"></a-asset-item>
+
+        <!-- scroll -->
+        <a-asset-item id="scroll-0" src="./Assets/TigerInParts/Scroll0/scroll0.gltf" alt=""></a-asset-item>
+        <a-asset-item id="scroll-1" src="./Assets/TigerInParts/Scroll1/scroll1.gltf" alt=""></a-asset-item>
+        <a-asset-item id="scroll-2" src="./Assets/TigerInParts/Scroll2/scroll2.gltf" alt=""></a-asset-item>
+
 
         <!-- audio -->
         <audio id="music" src="./chinese-loop.mp3"></audio>
@@ -43,17 +53,46 @@
 
       <!-- main ar scene -->
       <a-entity scale="0.05 0.05 0.05"  id="world">
+        <!-- models -->
         <a-entity 
-          gltf-model="#tigerMale"
-          rotation="0 0 0"
-          scale="1 1 1"
-          animation-mixer="clip: Action; animation-loop:true;"
-          >
-          <a-entity
-          sound="src: #music; autoplay: true; loop: true"
-          ></a-entity>
-        </a-entity>
-      
+        id="tigerAEntity"
+        gltf-model="#tigerA"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation-mixer="clip: Action.001; loop:true;"
+        ></a-entity>
+        <a-entity 
+        id="tigerBEntity"
+        gltf-model="#tigerB"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation-mixer="clip: Action.001; loop:true;"
+        ></a-entity>
+
+        <!-- props -->
+        <a-entity 
+        id="propsEntity"
+        gltf-model="#const-props"
+        rotation="0 0 0"
+        scale="1 1 1"
+        animation-mixer="clip: Action.001; true;"
+        ></a-entity>
+
+        <!-- scroll -->
+        <a-entity 
+        id="scroll0Entity"
+        gltf-model="#scroll-0"
+        ></a-entity>
+        <a-entity 
+        id="scroll1Entity"
+        gltf-model="#scroll-1"
+        ></a-entity>
+        <a-entity 
+        id="scroll2Entity"
+        gltf-model="#scroll-2"
+        ></a-entity>
+        <!-- sound -->
+        <a-entity sound="src: #music; autoplay: true; loop: true"></a-entity>      
       </a-entity>
 
       <!-- reticle -->
