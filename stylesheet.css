@@ -132,8 +132,8 @@ button{
 }
 
 .landing-tiger-image.img{
-  height: 100%;
-  width: 120%;
+  max-width: 60vw;
+  width: 100%;
 }
 
 .landing-start-button-parent{
