@@ -5,7 +5,7 @@ const reticle = document.querySelector('[ar-hit-test]');
 document.querySelector('a-scene').addEventListener('loaded', function () {
   //[ ] check ar android funcs
   if (navigator.xr) {
-    navigator.xr.isSessionSupported('immersive-vr')
+    navigator.xr.isSessionSupported('local-floor')
     .then((isSupported) => {
       if (isSupported) {
         console.log("supported");
