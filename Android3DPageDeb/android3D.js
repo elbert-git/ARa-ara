@@ -4,11 +4,18 @@ const reticle = document.querySelector('[ar-hit-test]');
 // function called on a-frame load
 document.querySelector('a-scene').addEventListener('loaded', function () {
   //[ ] check ar android funcs
-  const arOkay = navigator.xr.isSessionSupported("immersive-ar");
-  if (arOkay) {
-
-  } else {
-
+  if (navigator.xr) {
+    navigator.xr.isSessionSupported('immersive-vr')
+    .then((isSupported) => {
+      if (isSupported) {
+        console.log("supported");
+        alert("yes");
+      }
+      else {
+        console.log("no suportr");
+        alert("no");
+      }
+    });
   }
 
   //load approriate tiger
@@ -82,7 +89,6 @@ if(getMobileOperatingSystem() == "IOS"){
 
 
 
-
 // --------------- utilit functions
 function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -103,3 +109,8 @@ function getMobileOperatingSystem() {
 
   return "unknown";
 }
+
+
+
+//-------------------- sharing
+//get buttons

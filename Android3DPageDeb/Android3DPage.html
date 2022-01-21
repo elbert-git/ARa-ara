@@ -18,14 +18,14 @@
   <body>
     <!-- top share banner   -->
     <div class="top-share-parent">
-      <button class="top-share-button">Shasdfssdfre</button>
+      <button class="top-share-button">Share</button>
       <button class="top-share-button">Customise Tiger</button>
     </div>
 
     <!-- scene -->
     <a-scene 
       embedded
-      webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
+      webxr="requiredFeatures: hit-test, dom-overlay; overlayElement:#overlay;"
       vr-mode-ui="vrEnabled:false; arEnabled: true"
       background="transparent:true"
       >
@@ -121,7 +121,7 @@
     <div id="overlay" class="hide">
       <header>
         <div style="margin-top:1em;">hover over a surface and tap to spawn the tiger</div>
-        <button class="top-share-button">
+        <button class="top-share-button" click="wind">
           Share
         </button>
       </header>
