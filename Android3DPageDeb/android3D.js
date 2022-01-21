@@ -125,4 +125,17 @@ function getMobileOperatingSystem() {
 
 
 //-------------------- sharing
-//get buttons
+//prepare
+function shareButtonClicked(){;
+  console.log("aa");
+  //get url to share
+  const shareData = {
+    title: 'A very Happy Chinese Year to you!',
+    text: 'Check out this AR experience',
+    url: '${window.location.href}'
+  }
+
+  if(navigator.share){
+    navigator.share(shareData);
+  }
+}
