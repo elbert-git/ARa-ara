@@ -9,11 +9,11 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
     .then((isSupported) => {
       if (isSupported) {
         console.log("supported");
-        alert("yes");
+        alert("supports local-floor");
       }
       else {
-        console.log("no suportr");
-        alert("no");
+        console.log("no suportr for local-floor");
+        alert("no suportr for local-floor");
       }
     });
   }
