@@ -34,7 +34,15 @@ document.querySelector('a-scene').addEventListener('loaded', function () {
   });
 
   //apple ar check
-  if(getMobileOperatingSystem() == "IOS"){
+  let isIOS = [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform);
+  if(isIOS){
     spawnAppleARButton(); 
   }
 })
