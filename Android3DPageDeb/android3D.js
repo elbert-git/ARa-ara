@@ -89,7 +89,7 @@ function spawnAppleARButton(){
   arLink.href = 
   "./Assets/AppleTigers/Tiger" +
   tigerID +
-  ".usdz"
+   ".usdz"
   
 }
 //ss
