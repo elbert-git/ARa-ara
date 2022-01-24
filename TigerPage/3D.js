@@ -123,7 +123,6 @@ function spawnAppleARButton(){
   console.log(applePopUpButton);
   console.log(arLink.href);
 }
-spawnAppleARButton();
 
 
 
