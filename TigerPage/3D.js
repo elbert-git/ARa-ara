@@ -111,7 +111,7 @@ function spawnAppleARButton(){
 
   // get appropriate link to model
   let tigerID = window.location.href.split("?")[1];
-  console.log(tigerID)
+  console.log(tigerID);
 
   // apple pop up link
   let applePopUpButton = "#https://elbert-git.github.io/ARa-ara/TigerPage/AppleButton.html&customHeight=small";
@@ -124,6 +124,7 @@ function spawnAppleARButton(){
   console.log(applePopUpButton);
   console.log(arLink.href);
 }
+spawnAppleARButton();
 
 
 
