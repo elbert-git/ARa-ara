@@ -1,4 +1,4 @@
-let mainPageURL = "https://elbert-git.github.io/ARa-ara/"
+let mainPageURL = "https://elbert-git.github.io/ARa-ara/";
 //https://elbert-git.github.io/ARa-ara/
 //https://cny2022.hattengrp.com/
 //http://127.0.0.1:5500/
@@ -102,6 +102,7 @@ function LoadAppropriateTiger(){
 
 // ----------- apple ar
 function spawnAppleARButton(){
+  print
   let arButton = document.getElementById("apple-ar-button-parent");
 
   arButton.classList.remove("hide");
@@ -118,10 +119,14 @@ function spawnAppleARButton(){
   tigerID +
    ".usdz" +
    "#" +
-   "custom=" +  mainPageURL +"/Tigerpage/"+"AppleButton.html" +
+   "custom=" +  mainPageURL +"TigerPage/"+"AppleButton.html" +
    "&" +
-   "customHeight=small"
+   "customHeight=small";
+
+   console.log(mainPageURL);
+   console.log(arLink.href);
 }
+spawnAppleARButton();
 
 //test
 
