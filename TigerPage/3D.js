@@ -115,7 +115,7 @@ function spawnAppleARButton(){
   console.log(tigerID);
 
   // apple quick look pop up link
-  let applePopUpButton = "#custom=https://elbert-git.github.io/ARa-ara/TigerPage/AppleButton.html&customHeight=small";
+  let applePopUpButton = "#custom=" + mainPageURL + "/TigerPage/AppleButton.html&customHeight=small";
 
   //append link to file and popup to button
   let arLink = document.getElementById("ar-link");
@@ -171,7 +171,7 @@ function shareButtonClicked(){;
 const linkElement = document.getElementById("ar-link");
 			linkElement.addEventListener("message", function (event) {   
 					if (event.data == "_apple_ar_quicklook_button_tapped") {
-						shareButtonClicked();
+						window.location = currentTigerUrlToShareForApple;
 					}
 			}, false);
 
