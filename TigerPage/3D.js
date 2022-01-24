@@ -118,7 +118,7 @@ function spawnAppleARButton(){
   tigerID +
    ".usdz" +
    "#" +
-   "custom=https://elbert-git.github.io/ARa-ara/AppleButton.html" +
+   "custom=" +  mainPageURL +"/Tigerpage/"+"AppleButton.html" +
    "&" +
    "customHeight=small"
   
@@ -158,7 +158,7 @@ function shareButtonClicked(){;
   const shareData = {
     title: 'A very Happy Chinese Year to you!',
     text: 'Check out this AR experience',
-    url: '${window.location.href}'
+    url: '${currentTigerUrlToShareForApple}'
   }
 
   if(navigator.share){
