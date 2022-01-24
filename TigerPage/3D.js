@@ -113,20 +113,18 @@ function spawnAppleARButton(){
   let tigerID = window.location.href.split("?")[1];
   console.log(tigerID)
 
+  // apple pop up link
+  let applePopUpButton = "#https://elbert-git.github.io/ARa-ara/TigerPage/AppleButton"
+
   let arLink = document.getElementById("ar-link")
   arLink.href = 
   "./Assets/AppleTigers/Tiger" +
-  tigerID +
-   ".usdz" +
-   "#" +
-   "custom=" +  mainPageURL +"TigerPage/"+"AppleButton.html" +
-   "&" +
-   "customHeight=small";
+  tigerID + ".usdz" + applePopUpButton;
 
-   console.log(mainPageURL);
-   console.log(arLink.href);
+  console.log(applePopUpButton);
+  console.log(arLink.href);
 }
-
+spawnAppleARButton();
 //test
 
 
