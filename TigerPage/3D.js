@@ -1,6 +1,8 @@
-let mainPageURL = "https://cny2022.hattengrp.com/"
+let mainPageURL = "https://elbert-git.github.io/ARa-ara/"
 //https://elbert-git.github.io/ARa-ara/
 //https://cny2022.hattengrp.com/
+
+let currentTigerUrlToShareForApple = window.location.href;
 
 
 //---------------- A FRAME STUFF
@@ -157,4 +159,12 @@ function shareButtonClicked(){;
     navigator.share(shareData);
   }
 }
+
+// apple share button
+const linkElement = document.getElementById("ar-link");
+			linkElement.addEventListener("message", function (event) {   
+					if (event.data == "_apple_ar_quicklook_button_tapped") {
+						shareButtonClicked();
+					}
+			}, false);
 

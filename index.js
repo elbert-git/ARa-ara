@@ -126,7 +126,7 @@ function createURL(){
   urlString += greetingIndex + '/page'
 
   //return
-  return window.location.href + "/Android3DPageDeb/Android3DPage.html" + "?" + tigerType + greetingIndex;
+  return mainPageURL + "/TigerPage/3D.html" + "?" + tigerType + greetingIndex;
   //return urlString
 }
 
