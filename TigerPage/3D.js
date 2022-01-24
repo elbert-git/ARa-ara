@@ -102,7 +102,6 @@ function LoadAppropriateTiger(){
 
 // ----------- apple ar
 function spawnAppleARButton(){
-  print
   let arButton = document.getElementById("apple-ar-button-parent");
 
   arButton.classList.remove("hide");
