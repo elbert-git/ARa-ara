@@ -119,7 +119,7 @@ function spawnAppleARButton(){
 
   //append link to file and popup to button
   let arLink = document.getElementById("ar-link");
-  arLink.href = "./Assets/AppleTigers/Tiger" + tigerID + ".usdz" + applePopUpButton;
+  arLink.href = "./Assets/AppleTigers/Tiger" + tigerID + ".usdz";
 
   console.log(applePopUpButton);
   console.log(arLink.href);
