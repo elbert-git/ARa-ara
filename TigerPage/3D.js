@@ -126,7 +126,6 @@ function spawnAppleARButton(){
    console.log(mainPageURL);
    console.log(arLink.href);
 }
-spawnAppleARButton();
 
 //test
 
