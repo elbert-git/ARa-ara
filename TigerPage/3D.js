@@ -115,7 +115,7 @@ function spawnAppleARButton(){
   // apple pop up link
   let applePopUpButton = "#custom=https://elbert-git.github.io/ARa-ara/TigerPage/AppleButton.html&customHeight=small";
 
-  let arLink = document.getElementById("ar-link")
+  let arLink = document.getElementById("ar-link");
   arLink.href = 
   "./Assets/AppleTigers/Tiger" +
   tigerID + ".usdz" + applePopUpButton;
