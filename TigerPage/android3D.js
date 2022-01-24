@@ -1,3 +1,8 @@
+let mainPageURL = "https://cny2022.hattengrp.com/"
+//https://elbert-git.github.io/ARa-ara/
+//https://cny2022.hattengrp.com/
+
+
 //---------------- A FRAME STUFF
 const reticle = document.querySelector('[ar-hit-test]');
 

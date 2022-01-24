@@ -1,3 +1,7 @@
+let mainPageURL = "https://cny2022.hattengrp.com/"
+//https://elbert-git.github.io/ARa-ara/
+//https://cny2022.hattengrp.com/
+
 //------------ get elements
 // pages
 let landingPageRoot = document.getElementById('landing-page-root');
