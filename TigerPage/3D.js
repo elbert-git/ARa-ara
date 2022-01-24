@@ -102,23 +102,24 @@ function LoadAppropriateTiger(){
 
 // ----------- apple ar
 function spawnAppleARButton(){
+  // get button reference
   let arButton = document.getElementById("apple-ar-button-parent");
 
+  // make button appear when ios
   arButton.classList.remove("hide");
   arButton.classList.add("apple-ar-button-parent");
   arButton.classList.add("layer-over");
 
-  // get appropriate link to model
+  // get appropriate id to model
   let tigerID = window.location.href.split("?")[1];
   console.log(tigerID);
 
-  // apple pop up link
+  // apple quick look pop up link
   let applePopUpButton = "#custom=https://elbert-git.github.io/ARa-ara/TigerPage/AppleButton.html&customHeight=small";
 
+  //append link to file and popup to button
   let arLink = document.getElementById("ar-link");
-  arLink.href = 
-  "./Assets/AppleTigers/Tiger" +
-  tigerID + ".usdz" + applePopUpButton;
+  arLink.href = "./Assets/AppleTigers/Tiger" + tigerID + ".usdz" + applePopUpButton;
 
   console.log(applePopUpButton);
   console.log(arLink.href);
