@@ -1,6 +1,7 @@
-let mainPageURL = "https://cny2022.hattengrp.com/"
+let mainPageURL = "http://127.0.0.1:5500/"
 //https://elbert-git.github.io/ARa-ara/
 //https://cny2022.hattengrp.com/
+//http://127.0.0.1:5500/
 
 //------------ get elements
 // pages

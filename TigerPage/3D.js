@@ -1,6 +1,8 @@
-let mainPageURL = "https://elbert-git.github.io/ARa-ara/"
+let mainPageURL = "http://127.0.0.1:5500/"
 //https://elbert-git.github.io/ARa-ara/
 //https://cny2022.hattengrp.com/
+//http://127.0.0.1:5500/
+
 
 let currentTigerUrlToShareForApple = window.location.href;
 
@@ -114,7 +116,11 @@ function spawnAppleARButton(){
   arLink.href = 
   "./Assets/AppleTigers/Tiger" +
   tigerID +
-   ".usdz"
+   ".usdz" +
+   "#" +
+   "custom=https://elbert-git.github.io/ARa-ara/AppleButton.html" +
+   "&" +
+   "customHeight=small"
   
 }
 
@@ -168,3 +174,7 @@ const linkElement = document.getElementById("ar-link");
 					}
 			}, false);
 
+// ----- customise tiger button
+document.getElementById("customise-tiger-button").onclick=function() {
+  location.href = mainPageURL;
+}
